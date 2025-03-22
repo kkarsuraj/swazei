@@ -2,119 +2,51 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import "../styles/global.css";
 import Layout from "../components/layout"
+import Sidebar from "../components/sidebar"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    <section className="main-wrapper">
+      <div className="main-content">
+        <span className="text-[#33358c] bg-[#e7e7fb] py-[3px] px-[10px] rounded-[25px] uppercase text-[12px] font-[700] w-fit">our services</span>
+        <h3 className="text-[46px] font-[800] text-[#1c1c25] leading-[52px]">Custom Digital Transformation Solutions for Your Business</h3>
+        <p className="text-[#616161] text-[20px]">Swazei is an innovative and dynamic enterprise software solutions, website development, digital marketing and web/mobile app development company in the USA.  We have proven expertise and experience in creating success stories of business transformation through our digital marketing and top-tier custom software and website development solutions for all digital transformation needs of our clients.</p>
+        <div className="content-wrapper">
+          <div className="flex gap-[20px]">
+            <span className="text-[#ff9083] text-[30px]">01</span>
+            <div className="flex flex-col gap-[7px]">
+              <h4 className="text-[#232323] text-[24px] hover:text-[#ff9083]">Custom Software Development</h4>
+              <p className="text-[#616161] text-[18px]">State-of-the-art technologies like static, eCommerce, and custom web app development.</p>
+            </div>
+          </div>
+          <div className="flex gap-[20px]">
+            <span className="text-[#ff9083] text-[30px]">02</span>
+            <div className="flex flex-col gap-[7px]">
+              <h4 className="text-[#232323] text-[24px] hover:text-[#ff9083]">Mobile & Web Apps</h4>
+              <p className="text-[#616161] text-[18px]">Designing and developing Mobile apps on Hybrid, iOS, or Android platforms and ERP solutions-based Web Apps.</p>
+            </div>
+          </div>
+          <div className="flex gap-[20px]">
+            <span className="text-[#ff9083] text-[30px]">03</span>
+            <div className="flex flex-col gap-[7px]">
+              <h4 className="text-[#232323] text-[24px] hover:text-[#ff9083]">Designing</h4>
+              <p className="text-[#616161] text-[18px]">Graphic and UI/UX designing expertise for logo and other custom graphic needs.Distinctly modern and interactive designs that bring your vision to life and beyond.</p>
+            </div>
+          </div>
+          <div className="flex gap-[20px]">
+            <span className="text-[#ff9083] text-[30px]">04</span>
+            <div className="flex flex-col gap-[7px]">
+              <h4 className="text-[#232323] text-[24px] hover:text-[#ff9083]">SEO, SMM and Content</h4>
+              <p className="text-[#616161] text-[18px]">Customizable plans for your Content, SEO, and Social Media for organic & paid marketing needs to drive business growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="sidebar"><Sidebar/></div>
+    </section>
   </Layout>
 )
 
